@@ -17,4 +17,4 @@ social-auth-core==4.1.0
 psycopg2==2.8.6
 
 # Bulma CSS Library
-bulma==0.9.3
+django-bulma==0.9.3
