@@ -1,11 +1,7 @@
 {% extends 'base.html' %} {% block content %}
-<h2>Login</h2>
+<a href="" class="button is-warning">Login</a>
 
-<a
-  id="github-button"
-  class="btn btn-block btn-social btn-github"
-  href="{% url 'social:begin' 'github' %}"
->
+<a id="github-button" class="button is-info" href="{% url 'social:begin' 'github' %}">
   <i class="fa fa-github"></i> Sign in with Github
 </a>
 {% endblock %}
