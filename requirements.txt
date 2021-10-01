@@ -15,3 +15,6 @@ social-auth-core==4.1.0
 
 # Postgres
 psycopg2==2.8.6
+
+# Bulma CSS Library
+bulma==0.9.3
