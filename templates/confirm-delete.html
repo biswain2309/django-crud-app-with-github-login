@@ -3,13 +3,12 @@
   <div class="container">
     <div class="row">
       <form method="post">
+        {{ form|bulma }}
         {% csrf_token %}
         <p>Delete {{object}}?</p>
         <div class="form-group">
           <button type="submit" class="btn btn-primary">Submit</button>
-          <a href="{% url 'personalprofile:index' %}" class="btn btn-primary"
-            >Cancel</a
-          >
+          <a href="{% url 'personalprofile:index' %}" class="btn btn-primary">Cancel</a>
         </div>
       </form>
     </div>

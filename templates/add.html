@@ -3,6 +3,7 @@
   <div class="container">
     <div class="row">
       <form method="post">
+        {{ form|bulma }}
         {% csrf_token %} {% for field in form.visible_fields %}
         <div class="form-group">
           <label for="{{field.id_for_label}}">{{field.label}}</label>
@@ -13,9 +14,7 @@
         {% endfor %}
         <div class="form-group">
           <button type="submit" class="btn btn-primary">Submit</button>
-          <a href="{% url 'personalprofile:index' %}" class="btn btn-primary"
-            >Cancel</a
-          >
+          <a href="{% url 'personalprofile:index' %}" class="btn btn-primary">Cancel</a>
         </div>
       </form>
     </div>

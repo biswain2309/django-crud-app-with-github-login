@@ -1,33 +1,26 @@
 {% extends 'base.html' %} {% block content %}
 <div class="container">
   {% if object_list.values %} {% for item in object_list %}
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">{{item.username}}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{item.fullname}}</h6>
-        <p class="card-text"><strong>E-mail:</strong> {{item.email}}</p>
-        <p class="card-text">
-          <strong>Phone number:</strong> {{item.phone_no}}
-        </p>
-        <p class="card-text"><strong>Address:</strong> {{item.address}}</p>
-        <p class="card-text"><strong>Bio:</strong> {{item.description}}</p>
-        <!-- Profile options -->
-        <div class="btn-group">
-          <a href="{% url 'personalprofile:edit' item.id %}" class="card-link"
-            >Edit</a
-          >
-          <a href="{% url 'personalprofile:delete' item.id %}" class="card-link"
-            >Delete</a
-          >
-        </div>
-      </div>
+  <div class="notification is-primary content is-medium">
+    <h5 class="card-title">{{item.username}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{item.fullname}}</h6>
+    <p class="card-text"><strong>E-mail:</strong> {{item.email}}</p>
+    <p class="card-text">
+      <strong>Phone number:</strong> {{item.phone_no}}
+    </p>
+    <p class="card-text"><strong>Address:</strong> {{item.address}}</p>
+    <p class="card-text"><strong>Bio:</strong> {{item.description}}</p>
+    <!-- Profile options -->
+    <div class="buttons">
+      <a href="{% url 'personalprofile:edit' item.id %}" class="button is-info">Edit</a>
+      <a href="{% url 'personalprofile:delete' item.id %}" class="button is-danger">Delete</a>
     </div>
   </div>
-  {% endfor %} {% else %}
-  <h1>No profile created yet</h1>
-  <a href="/add">Click here to add one</a>
-  {% endif %}
+</div>
+{% endfor %} {% else %}
+<h1>No profile created yet</h1>
+<a href="/add">Click here to add one</a>
+{% endif %}
 </div>
 
 {% endblock %}

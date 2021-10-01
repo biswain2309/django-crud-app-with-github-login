@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "widget_tweaks",
     "phonenumber_field",
     "social_django",
+    "bulma",
 ]
 
 MIDDLEWARE = [
@@ -147,3 +148,5 @@ LOGIN_REDIRECT_URL = "index"
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
